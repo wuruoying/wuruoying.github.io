@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>gifify — 一款开源的视频转gif的小工具 | 吴若英的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="#背景产品日常工作中，竞品分析和监控是一个重要组成部分。目前我会经常使用GIF图制作竞品示意图。GIF图相比JPG&#x2F;PNG等静态图能清晰看到产品的交互和跳转流程，相比视频则具有自动播放的优势，且更容易插入到wiki和PPT中。但如何将视频转为GIF，其实是一个难题。目前主要有三种途径：    分类 优点 缺点    使用PS 可视化界面，操作简单 PS收费，启动麻烦大材小用   使用在线小工具 q">
+<meta property="og:type" content="article">
+<meta property="og:title" content="gifify — 一款开源的视频转gif的小工具">
+<meta property="og:url" content="https://blog.wuruoying.pro/2020/05/20/gifify%20%E2%80%94%20%E4%B8%80%E6%AC%BE%E5%BC%80%E6%BA%90%E7%9A%84%E8%A7%86%E9%A2%91%E8%BD%ACgif%E7%9A%84%E5%B0%8F%E5%B7%A5%E5%85%B7/index.html">
+<meta property="og:site_name" content="吴若英的博客">
+<meta property="og:description" content="#背景产品日常工作中，竞品分析和监控是一个重要组成部分。目前我会经常使用GIF图制作竞品示意图。GIF图相比JPG&#x2F;PNG等静态图能清晰看到产品的交互和跳转流程，相比视频则具有自动播放的优势，且更容易插入到wiki和PPT中。但如何将视频转为GIF，其实是一个难题。目前主要有三种途径：    分类 优点 缺点    使用PS 可视化界面，操作简单 PS收费，启动麻烦大材小用   使用在线小工具 q">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://www.wuruoying.pro/usr/uploads/2020/05/777697929.gif">
+<meta property="article:published_time" content="2020-05-20T09:31:32.887Z">
+<meta property="article:modified_time" content="2020-05-20T09:36:27.187Z">
+<meta property="article:author" content="Wu Ruoying">
+<meta property="article:tag" content="哔哩哔哩 | 搜索产品">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://www.wuruoying.pro/usr/uploads/2020/05/777697929.gif">
+  
+    <link rel="alternate" href="/atom.xml" title="吴若英的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">吴若英的博客</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">一个搜索产品的自我修养</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://blog.wuruoying.pro"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-gifify — 一款开源的视频转gif的小工具" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/05/20/gifify%20%E2%80%94%20%E4%B8%80%E6%AC%BE%E5%BC%80%E6%BA%90%E7%9A%84%E8%A7%86%E9%A2%91%E8%BD%ACgif%E7%9A%84%E5%B0%8F%E5%B7%A5%E5%85%B7/" class="article-date">
+  <time datetime="2020-05-20T09:31:32.887Z" itemprop="datePublished">2020-05-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      gifify — 一款开源的视频转gif的小工具
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#背景<br>产品日常工作中，竞品分析和监控是一个重要组成部分。目前我会经常使用GIF图制作竞品示意图。<br>GIF图相比JPG/PNG等静态图能清晰看到产品的交互和跳转流程，相比视频则具有自动播放的优势，且更容易插入到wiki和PPT中。<br>但如何将视频转为GIF，其实是一个难题。目前主要有三种途径：</p>
+<table>
+<thead>
+<tr>
+<th align="left">分类</th>
+<th align="left">优点</th>
+<th align="left">缺点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">使用PS</td>
+<td align="left">可视化界面，操作简单</td>
+<td align="left">PS收费，启动麻烦大材小用</td>
+</tr>
+<tr>
+<td align="left">使用在线小工具</td>
+<td align="left">query=视频转gif<br>启动方便</td>
+<td align="left">稳定靠谱的在线小工具比较难找</td>
+</tr>
+<tr>
+<td align="left">使用离线小工具</td>
+<td align="left">启动简单，自定义选项多</td>
+<td align="left">命令行界面，对</td>
+</tr>
+</tbody></table>
+<p>本次要介绍的，就是我在Github上找到的一个开源小工具gifify。</p>
+<p>#简介<br>gifify是一款视频转换成压缩Gif动画图片的开源工具。支持任何格式的视频以及选取某个时间段转换。<br>gifify遵守ISC（基本等同于BSD-clause2）开源协议。</p>
+<p>#Demo<br><img src="http://www.wuruoying.pro/usr/uploads/2020/05/777697929.gif" alt="demo"></p>
+<p>This screencast was recorded with <a href="https://github.com/lolilolicon/FFcast" target="_blank" rel="noopener">lolilolicon/FFcast</a> then converted to a GIF with:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gifify screencast.mkv -o screencast.gif --resize 800:-1</span><br></pre></td></tr></table></figure>
+
+<p>#特征</p>
+<ul>
+<li>command line interface。命令行界面</li>
+<li>programmatic JavaScript (<a href="http://nodejs.org/" target="_blank" rel="noopener">Node.JS</a>) <a href="http://nodejs.org/api/stream.html" target="_blank" rel="noopener">stream</a> interface。程序化JavaScript（Node.JS）流接口</li>
+<li>unix friendly, supports <code>stdin</code> &amp; <code>stdout</code>。unix友好，支持stdin＆stdout</li>
+<li>optimized! uses <a href="https://github.com/pornel/giflossy" target="_blank" rel="noopener">pornel/giflossy</a> to generate light GIFS。优化！使用pornel / giflossy生成轻型GIFS</li>
+<li>lots of options: movie speed, fps, colors, compression, resize, reverse, from &amp; to, subtitles。很多选项：电影速度，fps，颜色，压缩，调整大小，反转，从和到，字幕</li>
+<li>no temp files used, everything happens in memory。没有使用临时文件，一切都发生在内存中</li>
+<li>fast! Extracting a 5-second GIF from the middle of a 2-hour movie takes less than 20 seconds。快速！从2小时电影中间提取5秒GIF只需不到20秒</li>
+</ul>
+<h1 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h1><p>在安装gifify前，需要安装以下的包:</p>
+<ul>
+<li><a href="https://nodejs.org" target="_blank" rel="noopener">Node.js</a> (<code>$ brew install node</code>)</li>
+<li><a href="http://ffmpeg.org/" target="_blank" rel="noopener">FFmpeg</a> <a href="http://en.wikipedia.org/wiki/FFmpeg#History" target="_blank" rel="noopener">🐓🐓🐓🐓</a> (<code>$ brew install ffmpeg</code>)</li>
+<li><a href="http://www.imagemagick.org/script/convert.php" target="_blank" rel="noopener">convert</a>, the famous <a href="http://www.imagemagick.org/" target="_blank" rel="noopener">ImageMagick</a> (<code>$ brew install imagemagick</code>)</li>
+<li><a href="https://github.com/pornel/giflossy/releases" target="_blank" rel="noopener">pornel/giflossy</a>, it’s a <a href="http://www.lcdf.org/gifsicle/" target="_blank" rel="noopener">gifsicle</a> fork (waiting for <a href="https://github.com/kohler/gifsicle/pull/16" target="_blank" rel="noopener">gifsicle#16</a> to be merged) (<code>$ brew install giflossy</code>)</li>
+</ul>
+<p>You can also use the <a href="https://github.com/maxogden/gifify-docker" target="_blank" rel="noopener">gifify Docker image</a> which comes with everything installed.</p>
+<p>#安装</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g gifify</span><br></pre></td></tr></table></figure>
+
+<h1 id="Github链接"><a href="#Github链接" class="headerlink" title="Github链接"></a>Github链接</h1><p><a href="https://github.com/vvo/gifify" target="_blank" rel="noopener">https://github.com/vvo/gifify</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.wuruoying.pro/2020/05/20/gifify%20%E2%80%94%20%E4%B8%80%E6%AC%BE%E5%BC%80%E6%BA%90%E7%9A%84%E8%A7%86%E9%A2%91%E8%BD%ACgif%E7%9A%84%E5%B0%8F%E5%B7%A5%E5%85%B7/" data-id="ckaf5jjap0001rqs62oo067p5" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/05/18/%E5%8A%9F%E8%83%BD%E5%88%86%E6%9E%90%20%7C%20%E6%90%9C%E7%8B%97%E6%90%9C%E7%B4%A2-%20%E5%A3%B9%E5%9B%BE%E4%B8%87%E8%B1%A1%20/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">功能分析 | 搜狗搜索- 壹图万象 </div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">五月 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/05/20/gifify%20%E2%80%94%20%E4%B8%80%E6%AC%BE%E5%BC%80%E6%BA%90%E7%9A%84%E8%A7%86%E9%A2%91%E8%BD%ACgif%E7%9A%84%E5%B0%8F%E5%B7%A5%E5%85%B7/">gifify — 一款开源的视频转gif的小工具</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/18/%E5%8A%9F%E8%83%BD%E5%88%86%E6%9E%90%20%7C%20%E6%90%9C%E7%8B%97%E6%90%9C%E7%B4%A2-%20%E5%A3%B9%E5%9B%BE%E4%B8%87%E8%B1%A1%20/">功能分析 | 搜狗搜索- 壹图万象 </a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/18/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/17/%E5%BE%AE%E4%BF%A1%E6%90%9C%E7%B4%A2%E7%A0%94%E7%A9%B6/">微信搜索研究</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/16/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Wu Ruoying<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
